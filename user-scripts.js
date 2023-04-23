@@ -47,7 +47,7 @@
     
     
     popup();
-    pushNotify("Click to the button to Play Game");
+    pushNotify("Click Play then wait for 1-5s to Start");
 
 
    
