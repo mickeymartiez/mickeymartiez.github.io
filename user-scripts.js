@@ -96,9 +96,6 @@
     }, 100);
 }
 
-
-
-pushNotify("Success! Please wait 1-5s to Play");
   generateIframe();
 
 function generateButton() {
