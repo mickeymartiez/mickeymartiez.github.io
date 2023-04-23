@@ -50,47 +50,7 @@
     pushNotify("Click to the button to Play Game");
 
 
-    
-    
-    ((function() {
-      var callbacks = [],
-        timeLimit = 50,
-        open = false;
-      setInterval(loop, 1);
-      return {
-        addListener: function(fn) {
-          callbacks.push(fn);
-        },
-        cancleListenr: function(fn) {
-          callbacks = callbacks.filter(function(v) {
-            return v !== fn;
-          });
-        }
-      }
-
-      function loop() {
-        var startTime = new Date();
-        debugger;
-        if (new Date() - startTime > timeLimit) {
-          if (!open) {
-            callbacks.forEach(function(fn) {
-              fn.call(null);
-            });
-          }
-          open = true;
-          
-          window.stop();
-          
-          alert('Warning!!');
-          document.body.innerHTML = "";
-        } else {
-          open = false;
-          
-        }
-      }
-    })()).addListener(function() {
-      window.location.reload();
-    });	
+   
     
     function removeIframe() {
     // get the iframe element
@@ -140,12 +100,6 @@
 
 pushNotify("Success! Please wait 1-5s to Play");
   generateIframe();
-document.addEventListener("keydown", function(event) {
-  // this function will be called when a key is pressed
-  if (event.key === "k") {
-    generateIframe();
-  }
-});
 
 function generateButton() {
   var button = document.createElement("button"); // create a new button element
